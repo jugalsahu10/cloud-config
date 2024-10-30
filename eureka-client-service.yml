@@ -16,5 +16,7 @@ management:
       exposure:
         include: health, info, env  # Expose health and info endpoints
   endpoint:
+    env:
+      enabled: true
     health:
       show-details: always  # Show detailed health information
