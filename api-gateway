@@ -1,9 +1,16 @@
 server:
-  port: 9000
+  port: 8080  # You can set this to whatever port you prefer
 
 spring:
   application:
     name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: eureka-client
+          uri: lb://eureka-client-service  # Replace with your service name registered in Eureka
+          predicates:
+            - Path=/eureka-client/**  # Match requests with this path
 
 eureka:
   client:
