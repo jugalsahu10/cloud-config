@@ -7,10 +7,10 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: eureka-client
-          uri: lb://eureka-client-service  # Replace with your service name registered in Eureka
+        - id: eureka-client                   # port:8081
+          uri: lb://eureka-client-service     # Replace with your service name registered in Eureka
           predicates:
-            - Path=/eureka-client/**  # Match requests with this path
+            - Path=/eureka-client/**          # Match requests with this path
 
 eureka:
   client:
