@@ -4,6 +4,10 @@ server:
 spring:
   application:
     name: eureka-client-service
+  security:
+    user:
+      name: actuator-admin
+      secret: admin
 
 eureka:
   client:
@@ -13,8 +17,10 @@ eureka:
 management:
   endpoints:
     web:
+      base-path: /manage
       exposure:
-        include: health, info  # Expose health and info endpoints
+        # include: health, info, metrics, loggers, httptrace
+        include: *
   endpoint:
     env:
       enabled: true
