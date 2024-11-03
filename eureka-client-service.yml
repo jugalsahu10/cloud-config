@@ -18,9 +18,15 @@ management:
   endpoints:
     web:
       exposure:
-        include: health, info, metrics, loggers, httptrace, env  # Add 'env' to exposure list
+        include: health, info, metrics, loggers, httptrace, env, prometheus  # Add 'env' to exposure list
   endpoint:
     env:
       enabled: true
     health:
       show-details: always  # Show detailed health information
+  metrics:
+    export:
+      prometheus:
+        enabled: true  # Enable the Prometheus metrics endpoint
+    tags:
+      application: eureka-server  # Add a global tag for all metrics
