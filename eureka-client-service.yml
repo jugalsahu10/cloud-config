@@ -17,9 +17,8 @@ eureka:
 management:
   endpoints:
     web:
-      base-path: /manage
       exposure:
-        include: health, info, metrics, loggers, httptrace
+        include: health, info, metrics, loggers, httptrace, env  # Add 'env' to exposure list
   endpoint:
     env:
       enabled: true
