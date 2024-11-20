@@ -27,4 +27,4 @@ management:
       prometheus:
         enabled: true  # Enable the Prometheus metrics endpoint
     tags:
-      application: eureka-server  # Add a global tag for all metrics
+      application: eureka-client  # Add a global tag for all metrics
