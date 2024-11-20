@@ -20,8 +20,6 @@ management:
       exposure:
         include: health, info, metrics, prometheus
   endpoint:
-    env:
-      enabled: true
     health:
       show-details: always  # Show detailed health information
   metrics:
