@@ -1,5 +1,9 @@
 server:
   port: 8080  # You can set this to whatever port you prefer
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.cloud.discovery: DEBUG
 
 spring:
   application:
