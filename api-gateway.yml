@@ -11,6 +11,8 @@ spring:
           uri: lb://eureka-client-service     # Replace with your service name registered in Eureka
           predicates:
             - Path=/eureka-client/**          # Match requests with this path
+          filters:
+            - StripPrefix=1
 
 eureka:
   client:
